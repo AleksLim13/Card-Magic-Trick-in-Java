@@ -17,13 +17,15 @@ public class Card {
         public enum Suit {RED, YELLOW, GREEN, BLUE};
         
         //Call like Value.ZERO or Value.SKIP stands in for value
-        public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
+        public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
+                          SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
         
         //Actual holder of these values 
         //This is what we're setting
         private final Suit suit;//here suit is a var
         private final Value value;
-        private final ArrayList<Suit> suitList; 
+        private ArrayList<Suit> suitList; 
+        private ArrayList<Value> valueList; 
         
         //Start constructors here ...
         
@@ -31,8 +33,8 @@ public class Card {
         //Constructor DI so compiler is happy
         public Card(Suit s, Value gVal, ArrayList<Suit> suitList)
         {
-           suit = s;
-           value= gVal;
+           this.suit = s;
+           this.value= gVal;
            this.suitList = suitList;
         }
         
@@ -59,6 +61,49 @@ public class Card {
             suitList.add(yellow);
             suitList.add(green);
             suitList.add(blue);
+        }
+        
+        public void setValueList(){
+            
+            //Some rendundancies. Hmmm....
+            //We need to for loop this up. 
+            
+            //A: 
+            Value zero = Value.ZERO;
+            Value one = Value.ONE;
+            Value two = Value.TWO;
+            Value three = Value.THREE;
+            Value four = Value.FOUR;
+            Value five = Value.FIVE;
+            Value six = Value.SIX;
+            Value seven = Value.SEVEN;
+            Value eight = Value.EIGHT;
+            Value nine = Value.NINE;
+            Value skip = Value.SKIP;
+            Value reverse = Value.REVERSE;
+            Value drawtwo = Value.DRAWTWO;
+            Value drawfour = Value.DRAWFOUR;
+            Value wildcard = Value.WILDCARD;
+            
+            //B:
+            valueList.add(zero);
+            valueList.add(one);
+            valueList.add(two);
+            valueList.add(three);
+            valueList.add(four);
+            valueList.add(five);
+            valueList.add(six);
+            valueList.add(seven);
+            valueList.add(eight);
+            valueList.add(nine);
+            valueList.add(skip);
+            valueList.add(reverse);
+            valueList.add(drawtwo);
+            valueList.add(drawfour);
+            valueList.add(wildcard);
+           
+            
+            
         }
 	
 	public Suit getSuit() {
