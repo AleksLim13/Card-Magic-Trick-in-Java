@@ -22,8 +22,8 @@ public class CardHand {
                 {
                     for(Card.Value v: Card.Value.values())
                     {
-                        cards[countCards] = (new Card(s,v));
-                        countCards++;
+                        //cards[countCards] = (new Card(s,v));
+                        //countCards++;
                     }
                 }//end outter for
         }//end method
