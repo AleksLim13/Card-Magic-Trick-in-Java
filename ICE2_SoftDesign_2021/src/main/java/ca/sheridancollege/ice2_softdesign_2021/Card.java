@@ -6,8 +6,8 @@ package ca.sheridancollege.ice2_softdesign_2021;
  */
 public class Card {
     
-        public enum Suit {HEARTS, CLUBS,SPADES,DIAMONDS};
-        public enum Value{ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
+        public enum Suit {RED, YELLOW, GREEN, BLUE};
+        public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
         private final Suit suit;
         private final Value value;
         
