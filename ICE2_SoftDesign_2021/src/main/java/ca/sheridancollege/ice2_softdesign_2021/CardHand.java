@@ -3,7 +3,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
  * a class that models the Card Hand.
  * A Card hand has an array of cards. 
  * How can you change the size of the hand? how big is it right now?
- * @suthor dancye, 2019.
+ * @author Aleks Lim @ Sheridan College 2021
  */
 
 public class CardHand {
