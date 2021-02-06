@@ -2,7 +2,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
 /**
  * Starter code for the Card class.
  * To be used in Week 4.
- * @author dancye, 2019
+ * @author Aleks Lim @ Sheridan College 2021
  */
 public class Card {
     
