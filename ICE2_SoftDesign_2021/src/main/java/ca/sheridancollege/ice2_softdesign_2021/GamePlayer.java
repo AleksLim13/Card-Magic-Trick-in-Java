@@ -3,7 +3,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
  * A class to handle the user interaction for the Card
  * project. Contains a main method that generates a card hand
  * and then iterates over it to print its contents to the console.
- * @author dancye, 2019
+ * @author Aleks Lim @ Sheridan College 2021
  */
 public class GamePlayer {
 
