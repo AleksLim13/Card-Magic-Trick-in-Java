@@ -115,12 +115,7 @@ public class Deck {
     }
    
     
-    //Prints deck stoed in this class's deck field var
-    //Assumed to be set from actions elsewhere
-    public void printDeck(ArrayList<Card> tDeck) {
-        for (int i = 0; i < tDeck.size(); i++) {
-            System.out.println(tDeck.get(i).getValue() + " " + tDeck.get(i).getSuit());
-        }
-    }//End method 
+    
+    
 
 } //End class
