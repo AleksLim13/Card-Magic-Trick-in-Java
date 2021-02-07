@@ -1,6 +1,6 @@
 package ca.sheridancollege.ice2_softdesign_2021;
 
-import java.util.ArrayList;
+
 
 /**
  * Starter code for the Card class.
@@ -61,9 +61,6 @@ public class Card {
         
         public void setValueList(){
             
-            //Some rendundancies. Hmmm....
-            //We need to for loop this up. 
-
            this.valueList = Value.values();
        
         }
