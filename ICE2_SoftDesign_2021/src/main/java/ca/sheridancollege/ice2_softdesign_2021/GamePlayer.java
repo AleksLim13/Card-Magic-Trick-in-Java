@@ -34,7 +34,7 @@ public class GamePlayer {
               dealer.deckSetup(new Card(suit, value), new ArrayList<>()); 
               dealer.createHand(7);
               player01.setHand(dealer.getHand());
-              dealer.printHand(dealer.getHand());
+              dealer.printHand(player01.getHand());
               
                
 	}//End main 
