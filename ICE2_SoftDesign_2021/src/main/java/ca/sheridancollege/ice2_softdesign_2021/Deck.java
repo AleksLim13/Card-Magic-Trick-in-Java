@@ -55,12 +55,15 @@ public class Deck {
         for (int i = 0; i <= cardStuff.getValueList().length; i++) {
             //C: 
             for (int j = 0; j < cardStuff.getSuitList().length; j++) {
-                //tDeck.add(new Card(suits[j], i));
+              
                 tDeck.add(new Card(sTemp[j], vTemp[i]));
             }
         }
         return tDeck;
     }
+    
+    
+   
     
     //Main functionality here...The old swaperoo!
     //Swap pairs of card objects at random positions / 52.
@@ -70,8 +73,8 @@ public class Deck {
 
         //A: Create 
         int rando;
-        for (int i = 0; i < 52 - 1; i++) {
-            rando = (int) (Math.random() * 51) + 1;
+        for (int i = 0; i < this.getDeck().size()-1; i++) {
+            rando = (int) (Math.random() * 60) + 1;
 
             //C: 
             for (int j = 0; j < 1; j++) {
