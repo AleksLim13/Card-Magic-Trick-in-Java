@@ -28,11 +28,13 @@ public class GamePlayer {
                
             
               Dealer dealer = new Dealer(new Deck(), new ArrayList<>());
+              Player player01 = new Player();
               Suit suit = Suit.BLUE;
               Value value = Value.DRAWFOUR;
               dealer.deckSetup(new Card(suit, value), new ArrayList<>()); 
               dealer.createHand(7);
-              dealer.printHand();
+              player01.setHand(dealer.getHand());
+              dealer.printHand(dealer.getHand());
               
                
 	}//End main 
