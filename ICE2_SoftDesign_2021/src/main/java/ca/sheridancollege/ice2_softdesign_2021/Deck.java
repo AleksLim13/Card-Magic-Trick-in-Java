@@ -15,38 +15,66 @@ import java.util.ArrayList;
  */
 public class Deck {
 
-    private Card cardStuff;
     private ArrayList<Card> deck;
+    Suit suit = Suit.BLUE;
+    Value value = Value.DRAWFOUR;
+    private Card cardStuff = new Card(suit, value); 
+    private Suit[] suitList; 
+    private Value[] valueList; 
 
     
     //Empty constructor  
     public Deck() {
 
     }
-
+    
     //Call this first
-    public void initDI(Card cardStuff, ArrayList<Card> deck) {
-        this.cardStuff = cardStuff;
+    public void initDI(
+                       ArrayList<Card> deck, 
+                       Suit[] suitList, 
+                       Value[] valueList
+                       ) 
+    {
+      
         this.deck = deck;
+        this.suitList = suitList;
+        this.valueList = valueList; 
     }
+    
+    //Call First
+    public void setMyLists(){
+    cardStuff.setSuitList();
+    cardStuff.setValueList();
+    }
+    
+    //Call second 
+    public void assignMyLists(){
+       this.suitList = cardStuff.getSuitList();
+       this.valueList = cardStuff.getValueList();
+    }
+
+    
 
  
     //Of objects as cards with 2 fields 
     //Takes blank array list as param 
-    public void initDeck() {
+    public ArrayList<Card> initDeck(ArrayList<Card> tDeck) {
 
         //A: 
-        cardStuff.quickListSet();
-        Value[] vTemp = cardStuff.getValueList();
-        Suit[] sTemp = cardStuff.getSuitList();
+        //Assumes values list are set elsewhere
         
-        for (int i = 0; i < vTemp.length; i++) {
+        
+        //B:
+        for (int i = 0; i < valueList.length; i++) {
             //C: 
-            for (int j = 0; j < sTemp.length; j++) {
+            for (int j = 0; j < suitList.length; j++) {
               
-                deck.add(new Card(sTemp[j], vTemp[i]));
+                tDeck.add(new Card(suitList[j], valueList[i]));
             }
         }
+        
+        //C: 
+        return tDeck; 
       
     }
     
@@ -55,25 +83,25 @@ public class Deck {
     //Swap pairs of card objects at random positions / 52.
     //Needs the actually value of this class's field var
     //deck after it's been initialized. 
-    public void shuffle() {
+    public ArrayList<Card> shuffle(ArrayList<Card> tDeck) {
 
         //A: Create 
         int rando;
-        for (int i = 0; i < deck.size(); i++) {
+        for (int i = 0; i < tDeck.size(); i++) {
             rando = (int) (Math.random() * 60) + 1;
 
             //C: 
             for (int j = 0; j < 1; j++) {
 
                 //C.1: 
-                Card temp = deck.get(i);
-                deck.set(i, deck.get(rando));
-                deck.set(rando, temp);
+                Card temp = tDeck.get(i);
+                tDeck.set(i, tDeck.get(rando));
+                tDeck.set(rando, temp);
 
             }//End C
 
         }
-        
+        return tDeck; 
     }
     
     //To set a new deck 
@@ -81,22 +109,24 @@ public class Deck {
     public void setDeck(ArrayList<Card> newDeck) {
         this.deck = newDeck;
     }
-   
     
-    //Prints deck stoed in this class's deck field var
-    //Assumed to be set from actions elsewhere
-    public void printDeck() {
-        for (int i = 0; i < deck.size(); i++) {
-            System.out.println(deck.get(i).getValue() + " " + deck.get(i).getSuit());
-        }
-    }
-
- 
     //Normal getter method 
     //Returns value of field var deck of this class
     public ArrayList<Card> getDeck() {
         return deck;
     }
+   
+    
+    //Prints deck stoed in this class's deck field var
+    //Assumed to be set from actions elsewhere
+    public void printDeck(ArrayList<Card> tDeck) {
+        for (int i = 0; i < tDeck.size(); i++) {
+            System.out.println(tDeck.get(i).getValue() + " " + tDeck.get(i).getSuit());
+        }
+    }
+
+ 
+    
 
     
     
