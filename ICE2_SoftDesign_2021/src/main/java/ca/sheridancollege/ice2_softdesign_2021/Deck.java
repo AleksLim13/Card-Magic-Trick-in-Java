@@ -53,8 +53,6 @@ public class Deck {
        this.valueList = cardStuff.getValueList();
     }
 
-    
-
  
     //Of objects as cards with 2 fields 
     //Takes blank array list as param 
