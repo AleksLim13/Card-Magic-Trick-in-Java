@@ -3,6 +3,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
 import ca.sheridancollege.ice2_softdesign_2021.Card.Suit;
 import ca.sheridancollege.ice2_softdesign_2021.Card.Value;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 
@@ -39,7 +40,11 @@ public class GamePlayer {
              
               
               //Tests 
+            UserInput input = new UserInput();
+            Value value = input.pickAValue(new Scanner(System.in), new CardTrick());
+            Suit suit = input.pickASuit(new CardTrick());
             
+            System.out.println(value + " " + suit);
               
                
 	}//End main 
