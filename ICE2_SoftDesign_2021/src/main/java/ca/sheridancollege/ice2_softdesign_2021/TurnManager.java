@@ -8,12 +8,11 @@ package ca.sheridancollege.ice2_softdesign_2021;
 import java.util.ArrayList;
 
 
-/**
- * A class that models playing card Objects. Cards have a value (note that Ace =
- * 1, Jack -11, Queen =12, King = 13) A suit (clubs, hearts, spades, diamonds).
- * There are 52 cards in a deck, no jokers. This code is to be used in ICE1.
- * When you create your own branch, add your name as a modifier.
+/*
  *
+ * Make methods that switch players turn and
+   keep track of who's in play here 
+   But not yet
  * @author Aleks Lim @ Sheridan College 2021
  */
 public class TurnManager {
