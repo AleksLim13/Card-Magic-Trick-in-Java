@@ -54,5 +54,11 @@ public class Dealer {
         }
 
     }
+    
+    public void printHand(){
+     for(int i = 0; i < hand.size(); i++){
+         System.out.println(hand.get(i).getValue() + " " + hand.get(i).getSuit());
+     }
+    }
 
 }//End class
