@@ -85,8 +85,8 @@ public class Deck {
 
         //A: Create 
         int rando;
-        for (int i = 0; i < tDeck.size(); i++) {
-            rando = (int) (Math.random() * 60) + 1;
+        for (int i = 0; i < tDeck.size()-1; i++) {
+            rando = (int) (Math.random() * 59) + 1;
 
             //C: 
             for (int j = 0; j < 1; j++) {
