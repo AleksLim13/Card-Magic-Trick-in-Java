@@ -81,19 +81,17 @@ public class UserInput {
         return userPrompt;
     }
 
-    public Card.Suit pickASuit(){
+    public Card.Suit pickASuit(CardTrick cardTrick){
         String uSuit = promptStringUser(new Scanner(System.in));
-        CardTrick cardTrick = new CardTrick();
         Suit tSuit;
         tSuit = cardTrick.pickASuit(uSuit);
         return tSuit;
     }
     
     
-    public Card.Value pickAValue(){
+    public Card.Value pickAValue(Scanner input, CardTrick cardTrick){
         //A: 
-        Scanner input = new Scanner(System.in);
-        CardTrick cardTrick = new CardTrick();
+        
         Value tValue;
         
         //B: 
