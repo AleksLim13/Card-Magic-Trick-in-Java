@@ -16,7 +16,6 @@ import java.util.ArrayList;
 public class Deck {
 
     private Card cardStuff;
-    private String[] suits;
     private ArrayList<Card> deck;
     //0:CLUBS | 1:SPADES | 2:DIAMONDS | 3:HEARTS
     
@@ -31,11 +30,6 @@ public class Deck {
         this.deck = newDeck;
     }
 
-    //Set the feild var of this class to only 4 suits allowed
-    //Stored in the Cards class
-    public void setSuits(){
-        //this.suits = suit.getSUITS();
-    }
     
     
     //This sets this class's field var deck to output of
@@ -52,9 +46,9 @@ public class Deck {
         Value[] vTemp = cardStuff.getValueList();
         Suit[] sTemp = cardStuff.getSuitList();
         
-        for (int i = 0; i <= cardStuff.getValueList().length; i++) {
+        for (int i = 0; i < vTemp.length; i++) {
             //C: 
-            for (int j = 0; j < cardStuff.getSuitList().length; j++) {
+            for (int j = 0; j < sTemp.length; j++) {
               
                 tDeck.add(new Card(sTemp[j], vTemp[i]));
             }
@@ -73,7 +67,7 @@ public class Deck {
 
         //A: Create 
         int rando;
-        for (int i = 0; i < this.getDeck().size()-1; i++) {
+        for (int i = 0; i < deck.size(); i++) {
             rando = (int) (Math.random() * 60) + 1;
 
             //C: 
@@ -100,7 +94,7 @@ public class Deck {
     //Prints deck stoed in this class's deck field var
     //Assumed to be set from actions elsewhere
     public void printDeck() {
-        for (int i = 0; i < 52; i++) {
+        for (int i = 0; i < deck.size(); i++) {
             System.out.println(deck.get(i).getValue());
         }
     }
