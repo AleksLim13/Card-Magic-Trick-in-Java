@@ -5,8 +5,6 @@ import ca.sheridancollege.ice2_softdesign_2021.Card.Value;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 /**
  * A class to handle the user interaction for the Card
  * project. Contains a main method that generates a card hand
