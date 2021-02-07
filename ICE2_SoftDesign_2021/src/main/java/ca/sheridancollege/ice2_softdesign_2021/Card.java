@@ -18,6 +18,8 @@ public class Card {
         //these are what we are setting with...
         public enum Suit {RED, YELLOW, GREEN, BLUE};
         
+       
+        
         //Call like Value.ZERO or Value.SKIP stands in for value
         public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
                           SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
@@ -30,11 +32,7 @@ public class Card {
         private Value[] valueList; 
         
         //Start constructors here...
-        
-     
-     
-        
-      
+    
         
           //here Suit is a data type 
         //Constructor DI so compiler is happy
@@ -44,8 +42,8 @@ public class Card {
            this.value= value;
          
         }
-    
         
+    
         //Extract values and add them field var list
         public void setSuitList(){
             //A:
@@ -60,12 +58,7 @@ public class Card {
        
         }
         
-        //List var set up: 2 for 1
-        public void quickListSet(){
-            this.setValueList();
-            this.setSuitList();
-        }
-        
+  
         //Return field var's value 
 	public Value getValue() {
 		return this.value;
