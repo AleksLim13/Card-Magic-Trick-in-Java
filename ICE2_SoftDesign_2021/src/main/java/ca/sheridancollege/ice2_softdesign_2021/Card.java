@@ -7,7 +7,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
 
 /**
  *
- * @author aleks
+ * @author Aleks Lim @ Sheridan College 2021
  */
 public class Card {
     
@@ -51,13 +51,6 @@ public class Card {
        
         }
         
-  
-        //Return field var's value 
-	public Value getValue() {
-		return this.value;
-	}
-        
-        
         //Return value of list 
         public Suit[] getSuitList(){
         return suitList;
@@ -73,5 +66,10 @@ public class Card {
 	public Suit getSuit() {
 		return this.suit;
         }
+        
+        //Return field var's value 
+	public Value getValue() {
+		return this.value;
+	}
     
 }//End class
