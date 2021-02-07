@@ -44,7 +44,8 @@ public class GamePlayer {
             Value value = input.pickAValue(new Scanner(System.in), new CardTrick());
             Suit suit = input.pickASuit(new CardTrick());
             
-            System.out.println(value + " " + suit);
+            CardTrick cardTrick = new CardTrick();
+            cardTrick.isItHere(player01.getHand(), suit, value);
               
                
 	}//End main 
