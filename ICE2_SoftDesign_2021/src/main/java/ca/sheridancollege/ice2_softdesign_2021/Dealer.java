@@ -18,10 +18,7 @@ public class Dealer {
 
     private Deck deck;
     private ArrayList<Card> hand;
-   
-
   
-
     public Dealer() {
 
     }
@@ -64,11 +61,7 @@ public class Dealer {
 
     }
     
-    public void printHand(ArrayList<Card> tHand){
-     for(int i = 0; i < tHand.size(); i++){
-         System.out.println(tHand.get(i).getValue() + " " + tHand.get(i).getSuit());
-     }
-    }
+    
     
     public ArrayList<Card> getHand(){
     return hand; 
