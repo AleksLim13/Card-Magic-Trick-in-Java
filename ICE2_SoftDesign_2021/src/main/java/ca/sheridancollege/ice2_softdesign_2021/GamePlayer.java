@@ -1,5 +1,7 @@
 package ca.sheridancollege.ice2_softdesign_2021;
 
+import ca.sheridancollege.ice2_softdesign_2021.Card.Suit;
+import ca.sheridancollege.ice2_softdesign_2021.Card.Value;
 import java.util.ArrayList;
 
 
@@ -33,6 +35,11 @@ public class GamePlayer {
               
               //E: Have the dealer print out the players hand
               printer.printHand(player01.getHand());
+              
+             
+              
+              //Tests 
+            
               
                
 	}//End main 
