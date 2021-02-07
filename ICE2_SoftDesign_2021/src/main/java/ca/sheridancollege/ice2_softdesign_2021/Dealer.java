@@ -64,10 +64,14 @@ public class Dealer {
 
     }
     
-    public void printHand(){
-     for(int i = 0; i < hand.size(); i++){
-         System.out.println(hand.get(i).getValue() + " " + hand.get(i).getSuit());
+    public void printHand(ArrayList<Card> tHand){
+     for(int i = 0; i < tHand.size(); i++){
+         System.out.println(tHand.get(i).getValue() + " " + tHand.get(i).getSuit());
      }
+    }
+    
+    public ArrayList<Card> getHand(){
+    return hand; 
     }
 
 }//End class
