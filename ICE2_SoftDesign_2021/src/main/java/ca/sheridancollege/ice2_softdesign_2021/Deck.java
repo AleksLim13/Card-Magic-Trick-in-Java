@@ -17,7 +17,7 @@ public class Deck {
 
     private Card cardStuff;
     private ArrayList<Card> deck;
-    //0:CLUBS | 1:SPADES | 2:DIAMONDS | 3:HEARTS
+
     
     //Empty constructor  
     public Deck() {
@@ -25,24 +25,18 @@ public class Deck {
     }
 
     //Call this first
-    public void initDI(Card cardStuff, ArrayList<Card> newDeck) {
+    public void initDI(Card cardStuff, ArrayList<Card> deck) {
         this.cardStuff = cardStuff;
-        this.deck = newDeck;
+        this.deck = deck;
     }
 
-    
-    
-    //This sets this class's field var deck to output of
-    //This classes init deck method 
-    public void setInitDeck() {
-        this.deck = initDeck(new ArrayList<>());
-    }
-    
-    //Initialize deck with 4 of 1-13. 
+ 
     //Of objects as cards with 2 fields 
-    public ArrayList<Card> initDeck(ArrayList<Card> tDeck) {
+    //Takes blank array list as param 
+    public void initDeck() {
 
         //A: 
+        cardStuff.quickListSet();
         Value[] vTemp = cardStuff.getValueList();
         Suit[] sTemp = cardStuff.getSuitList();
         
@@ -50,20 +44,18 @@ public class Deck {
             //C: 
             for (int j = 0; j < sTemp.length; j++) {
               
-                tDeck.add(new Card(sTemp[j], vTemp[i]));
+                deck.add(new Card(sTemp[j], vTemp[i]));
             }
         }
-        return tDeck;
+      
     }
     
-    
-   
-    
+  
     //Main functionality here...The old swaperoo!
     //Swap pairs of card objects at random positions / 52.
     //Needs the actually value of this class's field var
     //deck after it's been initialized. 
-    public ArrayList<Card> shuffle(ArrayList<Card> tDeck) {
+    public void shuffle() {
 
         //A: Create 
         int rando;
@@ -74,14 +66,14 @@ public class Deck {
             for (int j = 0; j < 1; j++) {
 
                 //C.1: 
-                Card temp = tDeck.get(i);
-                tDeck.set(i, tDeck.get(rando));
-                tDeck.set(rando, temp);
+                Card temp = deck.get(i);
+                deck.set(i, deck.get(rando));
+                deck.set(rando, temp);
 
             }//End C
 
         }
-        return tDeck;
+        
     }
     
     //To set a new deck 
@@ -95,7 +87,7 @@ public class Deck {
     //Assumed to be set from actions elsewhere
     public void printDeck() {
         for (int i = 0; i < deck.size(); i++) {
-            System.out.println(deck.get(i).getValue());
+            System.out.println(deck.get(i).getValue() + " " + deck.get(i).getSuit());
         }
     }
 
@@ -103,7 +95,6 @@ public class Deck {
     //Normal getter method 
     //Returns value of field var deck of this class
     public ArrayList<Card> getDeck() {
-
         return deck;
     }
 
