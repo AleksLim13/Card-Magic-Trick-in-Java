@@ -27,7 +27,10 @@ public class Card {
         private Suit[] suitList; 
         private Value[] valueList; 
         
-        //Start constructors here ...
+        //Start constructors here...
+        
+     
+     
         
         //here Suit is a data type 
         //Constructor DI so compiler is happy
@@ -37,6 +40,8 @@ public class Card {
            this.value= gVal;
          
         }
+        
+     
         
         //Extract values and add them field var list
         public void setSuitList(){
