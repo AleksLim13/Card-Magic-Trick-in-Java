@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.ice1_2021_sofdesign;
+package ca.sheridancollege.ice2_softdesign_2021;
 
 /**
  *
