@@ -5,6 +5,8 @@
  */
 package ca.sheridancollege.ice2_softdesign_2021;
 
+import ca.sheridancollege.ice2_softdesign_2021.Card.Suit;
+import ca.sheridancollege.ice2_softdesign_2021.Card.Value;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Deck {
 
-    private Card suit;
+    private Card cardStuff;
     private String[] suits;
     private ArrayList<Card> deck;
     //0:CLUBS | 1:SPADES | 2:DIAMONDS | 3:HEARTS
@@ -24,8 +26,8 @@ public class Deck {
     }
 
     //Call this first
-    public void initDI(Card newSuits, ArrayList<Card> newDeck) {
-        this.suit = newSuits;
+    public void initDI(Card cardStuff, ArrayList<Card> newDeck) {
+        this.cardStuff = cardStuff;
         this.deck = newDeck;
     }
 
@@ -47,11 +49,14 @@ public class Deck {
     public ArrayList<Card> initDeck(ArrayList<Card> tDeck) {
 
         //A: 
-        for (int i = 1; i <= 13; i++) {
+        Value[] vTemp = cardStuff.getValueList();
+        Suit[] sTemp = cardStuff.getSuitList();
+        
+        for (int i = 0; i <= cardStuff.getValueList().length; i++) {
             //C: 
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < cardStuff.getSuitList().length; j++) {
                 //tDeck.add(new Card(suits[j], i));
-
+                tDeck.add(new Card(sTemp[j], vTemp[i]));
             }
         }
         return tDeck;
