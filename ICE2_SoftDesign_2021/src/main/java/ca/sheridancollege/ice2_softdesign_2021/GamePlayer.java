@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class GamePlayer {
     
-    private enum testeroo{ONE, TWO, THREE, FOUR, FIVE};
+    
 
 	public static void main(String[] args) {
 		//CardHand ch = new CardHand();
@@ -24,8 +24,10 @@ public class GamePlayer {
                // System.out.println(ch.cards); show what happens when there is no toString()
                //System.out.println(Value.values());
                
-               testeroo[] testList = testeroo.values();
-               System.out.println(testList.length);
+              Dealer dealer = new Dealer();
+              dealer.deckSetup();
+              dealer.createHand(7);
+              dealer.printHand();
                
 	}
 
