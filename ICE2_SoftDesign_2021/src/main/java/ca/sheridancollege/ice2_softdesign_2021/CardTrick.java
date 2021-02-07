@@ -20,18 +20,16 @@ public class CardTrick {
     public CardTrick() {
     }
 
-    public void isItHere(ArrayList<Card> hand, int uValue, String uSuit) {
+    public void isItHere(ArrayList<Card> hand, Card.Suit suit, Card.Value value) {
         for (int i = 0; i < hand.size(); i++) {
-
-        }
-    }
-
-    public void isItHereAgain(ArrayList<Card> hand, Card luckyCard) {
-
-        for (int i = 0; i < hand.size(); i++) {
-
+            Card tCard = hand.get(i);
+            if(tCard.getSuit() == suit && tCard.getValue() == value){
+                System.out.println("Yep, its here at index: " + i);
+            }
         }
     }//End method 
+
+
 
     public Card.Suit pickASuit(String suit) {
         Card.Suit sResult = Card.Suit.BLUE;
