@@ -26,14 +26,20 @@ public class GamePlayer {
                // System.out.println(ch.cards); show what happens when there is no toString()
                //System.out.println(Value.values());
                
-            
+              //A: 
               Dealer dealer = new Dealer(new Deck(), new ArrayList<>());
               Player player01 = new Player();
-              Suit suit = Suit.BLUE;
-              Value value = Value.DRAWFOUR;
-              dealer.deckSetup(new Card(suit, value), new ArrayList<>()); 
+             
+              //B: 
+              dealer.deckSetup(new Card(), new ArrayList<>()); 
+              
+              //C: 
               dealer.createHand(7);
+              
+              //D: 
               player01.setHand(dealer.getHand());
+              
+              //E: 
               dealer.printHand(player01.getHand());
               
                
