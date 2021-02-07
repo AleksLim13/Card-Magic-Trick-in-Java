@@ -121,12 +121,6 @@ public class Deck {
         for (int i = 0; i < tDeck.size(); i++) {
             System.out.println(tDeck.get(i).getValue() + " " + tDeck.get(i).getSuit());
         }
-    }
-
- 
-    
-
-    
-    
+    }//End method 
 
 } //End class
