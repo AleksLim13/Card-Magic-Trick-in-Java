@@ -1,37 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ca.sheridancollege.ice2_softdesign_2021;
 
-
-
 /**
- * Starter code for the Card class.
- * To be used in Week 4.
- * @author Aleks Lim @ Sheridan College 2021
+ *
+ * @author aleks
  */
 public class Card {
     
-       
-    
-        //Field vars start here...
-    
-        //Call like Suit.RED or Suit.BLUE stands in for value
-        //These values are final, of same data type, and a class in themselves. Wow!!
-        //these are what we are setting with...
-        public enum Suit {RED, YELLOW, GREEN, BLUE};
-        
-       
-        
-        //Call like Value.ZERO or Value.SKIP stands in for value
-        public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
-                          SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
-        
-        //Actual holder of these values 
-        //This is what we're setting
-        private final Suit suit;//here suit is a var
-        private final Value value;
+        private Suit suit;//here suit is a var
+        private Value value;
         private Suit[] suitList; 
         private Value[] valueList; 
         
-        //Start constructors here...
+    public Card(){
+    }
+    
+    public enum Suit {RED, YELLOW, GREEN, BLUE};
+    
+    public enum Value{ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, 
+                          SKIP, REVERSE, DRAWTWO, DRAWFOUR, WILDCARD};
+    
+     //Start constructors here...
     
         
           //here Suit is a data type 
@@ -80,5 +73,5 @@ public class Card {
 	public Suit getSuit() {
 		return this.suit;
         }
-        
-}//End class 
+    
+}//End class
