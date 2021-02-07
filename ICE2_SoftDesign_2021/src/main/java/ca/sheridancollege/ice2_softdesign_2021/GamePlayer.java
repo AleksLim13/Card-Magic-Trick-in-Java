@@ -1,5 +1,7 @@
 package ca.sheridancollege.ice2_softdesign_2021;
 
+import ca.sheridancollege.ice2_softdesign_2021.Card.Suit;
+import ca.sheridancollege.ice2_softdesign_2021.Card.Value;
 import java.util.ArrayList;
 
 
@@ -24,10 +26,16 @@ public class GamePlayer {
                // System.out.println(ch.cards); show what happens when there is no toString()
                //System.out.println(Value.values());
                
-              Dealer dealer = new Dealer();
-              dealer.deckSetup();
-              dealer.createHand(7);
-              dealer.printHand();
+              //Deck deck = new Deck();
+              //Dealer dealer = new Dealer();
+              Dealer dealer = new Dealer(new Deck(), new ArrayList<>());
+              Suit suit = Suit.BLUE;
+              Value value = Value.DRAWFOUR;
+              dealer.deckSetup(new Card(suit, value), new ArrayList<>());
+              //dealer.deckSetup(new Card(suit, value), new ArrayList<>());
+              //dealer.createHand(7);
+              //dealer.printHand();
+              
                
 	}
 
