@@ -9,6 +9,8 @@ package ca.sheridancollege.ice2_softdesign_2021;
  */
 public class Card {
     
+       
+    
         //Field vars start here...
     
         //Call like Suit.RED or Suit.BLUE stands in for value
@@ -32,16 +34,17 @@ public class Card {
      
      
         
-        //here Suit is a data type 
+      
+        
+          //here Suit is a data type 
         //Constructor DI so compiler is happy
-        public Card(Suit s, Value gVal)
+        public Card(Suit suit, Value value)
         {
-           this.suit = s;
-           this.value= gVal;
+           this.suit = suit;
+           this.value= value;
          
         }
-        
-     
+    
         
         //Extract values and add them field var list
         public void setSuitList(){
@@ -85,4 +88,4 @@ public class Card {
 		return this.suit;
         }
         
-}
+}//End class 
