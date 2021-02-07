@@ -29,7 +29,8 @@ public class TurnManager {
     private ArrayList<String> shuffledSuits;
     private ArrayList<String> suitsHolder;
     private ArrayList<String> suits;
-    private ArrayList<Integer> deck; 
+    private ArrayList<Card> deck; 
+    private Card cardStuff;
 
     //Standard deck contains values from 1-13 * 4. 
     //This needs to be shuffled before used
@@ -47,7 +48,8 @@ public class TurnManager {
              ArrayList<String> shuffledSuits,
              ArrayList<String> suitsHolder,
              ArrayList<String> suits,
-             ArrayList<Integer> deck){
+             ArrayList<Card> deck,
+             Card cardStuff){
     
     this.suit = suit;
     this.value = value; 
@@ -61,19 +63,19 @@ public class TurnManager {
     this.suitsHolder = suitsHolder;
     this.suits = suits;
     this.deck = deck; 
+    this.cardStuff = cardStuff;
     }
-    
-    
+   
    
     public String getSuit() {
         return suit;
     }
 
-    public ArrayList<Integer> getDeck() {
+    public ArrayList<Card> getDeck() {
         return deck;
     }
     
-    public void setDeck(ArrayList<Integer> newDeck){
+    public void setDeck(ArrayList<Card> newDeck){
      this.deck = newDeck;
     }
     public ArrayList<Card> getHand(){
@@ -145,46 +147,6 @@ public class TurnManager {
     public void setPossible(int newPossible) {
         this.possible = newPossible;
     }
-
-    //Swaps pairs at rando position for
-    //shuffled deck and suits
-    public void shuffle() {
-        
-        //A: Create It
-       ArrayList<Integer> tDeck = this.getDeckHolder();
-       ArrayList<String> tSuits = this.getSuitsHolder();
-       
-       int rando;
-       for(int i = 0; i < 52-1; i++){
-       rando = (int) (Math.random() * 51) + 1;
-       
-       //C: 
-        for(int j = 0; j < 1; j++){
-            
-            //C.1: 
-            this.setIntTemp(tDeck.get(i));
-            tDeck.set(i, tDeck.get(rando));
-            tDeck.set(rando, this.getIntTemp());
-            
-            //C.2: 
-            this.setStringTemp(tSuits.get(i));
-            tSuits.set(i, tSuits.get(rando));
-            tSuits.set(rando, this.getStringTemp());
-            
-        }//End C
-        
-       }//End B
-    
-        //D: Remember It
-        this.setShuffledDeck(tDeck);
-        this.setShuffledSuits(tSuits);
-        
-    }//End 
-    
-   
-    
-   
-
     /**
      * @param suit the suit to set
      */
