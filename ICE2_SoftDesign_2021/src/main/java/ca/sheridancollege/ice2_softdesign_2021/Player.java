@@ -32,4 +32,8 @@ public class Player {
         return hand; 
     }
     
+    public void setHand(ArrayList<Card> newHand){
+    this.hand = newHand; 
+    }
+    
 }//End class
