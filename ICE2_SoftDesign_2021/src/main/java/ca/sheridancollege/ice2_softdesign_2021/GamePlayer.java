@@ -30,12 +30,11 @@ public class GamePlayer {
               Dealer dealer = new Dealer(new Deck(), new ArrayList<>());
               Suit suit = Suit.BLUE;
               Value value = Value.DRAWFOUR;
-              dealer.deckSetup(new Card(suit, value), new ArrayList<>());
-            
+              dealer.deckSetup(new Card(suit, value), new ArrayList<>()); 
               dealer.createHand(7);
               dealer.printHand();
               
                
-	}
+	}//End main 
 
-}
+}//End class
