@@ -35,36 +35,47 @@ public class Card {
         {
            this.suit = s;
            this.value= gVal;
- 
+         
         }
         
+        //Extract values and add them field var list
+        public void setSuitList(){
+            //A:
+            this.suitList = Suit.values();
+            
+        }
+        
+        //Make this var normal array of card values 
+        public void setValueList(){
+            //A: 
+           this.valueList = Value.values();
+       
+        }
+        
+        //List var set up: 2 for 1
+        public void quickListSet(){
+            this.setValueList();
+            this.setSuitList();
+        }
+        
+        //Return field var's value 
 	public Value getValue() {
 		return this.value;
 	}
         
         
-        //Bring it back now...
+        //Return value of list 
         public Suit[] getSuitList(){
         return suitList;
         }
         
+        //Return value of list
         public Value[] getValueList(){
             return valueList;
         }
 
-        //Extract values and add them field var list
-        public void setSuitList(){
-            //A: 
-            this.suitList = Suit.values();
-            
-        }
         
-        public void setValueList(){
-            
-           this.valueList = Value.values();
-       
-        }
-	
+	//Return value of field var 
 	public Suit getSuit() {
 		return this.suit;
         }
