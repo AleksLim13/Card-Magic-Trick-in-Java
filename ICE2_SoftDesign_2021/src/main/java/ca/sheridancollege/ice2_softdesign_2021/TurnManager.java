@@ -51,4 +51,24 @@ public class TurnManager {
         return inPlay;
     }
 
+    //Deciding which player goes first 
+    public String coinToss(String guess) {
+        //A: Create It
+        String[] coin = {"heads", "tails"};
+        int decision = (int) (Math.random() * 2);
+        //B: Do It
+        String flipped = coin[decision];
+        //C: Evaluate It
+        String result;
+        if (guess.equals(flipped)) {
+            result = "correct";
+        } else {
+            result = "incorrect";
+        }
+        //D: Copy It
+        return result;
+    }
+    
+    
+    
 }//End class 
