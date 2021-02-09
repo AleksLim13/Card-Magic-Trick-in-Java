@@ -12,7 +12,7 @@ package ca.sheridancollege.ice2_softdesign_2021;
 
 //Encapsulation lets us just change our class in one place instead of many. 
 //Creating this class card has encapsulated all stuff related to a card in
-//real life like suit and value. We can resuse this class 60 times in creating
+//real life like suit and value. We can reuse this class 60 times in creating
 //our Uno deck and we only have to code one of these. We link this functionality
 //to a var name of this data type and boom, we can just use it's functionality. 
 
@@ -24,6 +24,7 @@ public class Card {
         private Value[] valueList; 
         
     public Card(){
+        
     }
     
     public enum Suit {RED, YELLOW, GREEN, BLUE};
