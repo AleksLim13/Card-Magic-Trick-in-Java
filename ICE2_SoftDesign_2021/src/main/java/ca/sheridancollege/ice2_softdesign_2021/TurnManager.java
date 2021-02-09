@@ -10,11 +10,34 @@ package ca.sheridancollege.ice2_softdesign_2021;
  * @author Aleks Lim @ Sheridan College 2021
  */
 public class TurnManager {
+    
+    //Field Var's 
     private Player inPlay;
     private Player notInPlay;
     
+    //Constructor 
     public TurnManager(){
     
     }
     
-}
+    //Getter 
+    public Player getInPlay(){
+    return inPlay; 
+    }
+    
+    //Setter 
+    public void setInPlay(Player newInPlay){
+        this.inPlay = newInPlay; 
+    }
+    
+    //Getter 
+    public Player getNotInPlay(){
+    return notInPlay; 
+    }
+    
+    //Setter 
+    public void setNotInPlay(Player newNotInPlay){
+        this.notInPlay = newNotInPlay; 
+    }
+    
+}//End class 
